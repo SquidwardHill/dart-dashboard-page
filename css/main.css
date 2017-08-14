@@ -355,11 +355,10 @@ th {
 
 /*FONT MIXINS*/
 @font-face {
-  font-family: "BebasNeue";
-  src: url("/fonts/BebasNeueRegular.otf") format("eot"), url("/fonts/BebasNeueRegular.ttf") format("ttf"), url("/fonts/BebasNeueRegular.woff2") format("woff"); }
-@font-face {
-  font-family: "BebasNeue Bold";
-  src: url("/fonts/BebasNeueBold.otf") format("eot"), url("/fonts/BebasNeueBold.ttf") format("ttf"), url("/fonts/BebasNeueBold.woff2") format("woff"); }
+  font-family: 'Wicked Grit';
+  src: url("/fonts/wickedgrit-webfont.woff2") format("woff2"), url("/fonts/wickedgrit-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
 /*VARIABLES*/
 /*MIXINS*/
 /*FONTS*/
@@ -367,7 +366,7 @@ body h1,
 body h2,
 body h3,
 body .button {
-  font-family: "BebasNeue", sans-serif;
+  font-family: "Wicked Grit", sans-serif;
   text-transform: uppercase;
   -webkit-margin-before: 0em;
   -webkit-margin-after: 0em;
@@ -376,12 +375,14 @@ body .button {
   line-height: 1.3em;
   font-weight: 600;
   border-radius: 2px;
-  margin: 0 10px;
+  margin: 5px;
   color: #000; }
+body .button.light {
+  background: #fff; }
 body p {
   font-size: 16px;
   line-height: 34px;
-  font-family: "Fira Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #666;
   padding-bottom: 0 !important; }
 body h1 {
@@ -392,8 +393,8 @@ body h1.light {
 body h2 {
   font-size: 32px;
   line-height: 32px; }
-body h2.green {
-  color: #99CC02; }
+body h2.primary-color {
+  color: #285281; }
 body h2.light {
   font-size: 28px;
   color: #fff; }
@@ -408,7 +409,7 @@ body h3.underline:after {
   content: "";
   height: 2px;
   width: 60px;
-  background: #99CC02;
+  background: #285281;
   display: block;
   margin: 10px auto 0 auto; }
 body li {
@@ -416,12 +417,15 @@ body li {
   font-weight: 600;
   line-height: 40px;
   color: #666;
-  font-family: "Fira Sans", sans-serif; }
+  font-family: "Roboto", sans-serif; }
 
 /*BUTTONS & LINKS*/
+.button.light {
+  background: #fff; }
+
 .button {
-  font-family: "BebasNeue", sans-serif;
-  background: #99CC02;
+  font-family: "Wicked Grit", sans-serif;
+  background: #285281;
   color: #000;
   text-transform: uppercase;
   text-decoration: none;
@@ -433,7 +437,7 @@ body li {
   padding: 12px 30px;
   margin: auto;
   margin: 10px;
-  min-width: 150px;
+  min-width: 190px;
   letter-spacing: .2px;
   transition: .02s ease; }
   .button:hover {
@@ -450,8 +454,11 @@ a.simple:hover {
   color: #666; }
 
 a.simple-inline {
-  border-bottom: 1px solid #99cc02;
+  border-bottom: 1px solid #285281;
   color: #666; }
+
+.call-apply-btns {
+  text-align: center; }
 
 /*LAYOUT*/
 body .container-fluid {
@@ -476,8 +483,8 @@ body .row {
   display: none; }
 
 /*CUSTOM*/
-.border-bottom-green {
-  border-bottom: 4px solid #99CC02; }
+.border-bottom-primary-color {
+  border-bottom: 4px solid #285281; }
 
 .row-wrap {
   display: -webkit-box;
@@ -491,18 +498,21 @@ body .row {
   align-items: center; }
 
 .logo {
+  text-align: center;
   margin: 10px auto; }
+  .logo img {
+    max-width: 200px; }
 
 /*HEADER*/
 header {
-  background: #000;
-  border-bottom: 2px solid #99CC02; }
+  background: #285281;
+  border-bottom: 2px solid #285281; }
   header .row {
     padding: 20px 0; }
 
 /*HERO*/
 .hero {
-  background-image: url(/img/header-truck-image.jpg);
+  background-image: url(/img/dart-driver-wheel.jpg);
   background-size: cover;
   background-position: right;
   min-height: 500px; }
@@ -512,11 +522,13 @@ header {
 
 /*DRIVER TYPE BOXES*/
 .driver-type-box {
-  margin: 40px;
   box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.5);
   position: relative;
   min-height: 311px;
-  background: #fff; }
+  background: #fff;
+  margin-bottom: 160px; }
+  .driver-type-box:first-child {
+    margin-top: -80px; }
   .driver-type-box .driver-type-inner {
     position: absolute;
     width: 100%;
@@ -567,7 +579,7 @@ a.simple:after {
   content: "";
   height: 1px;
   width: 80px;
-  background: #99CC02;
+  background: #285281;
   display: block;
   margin: 0 auto;
   text-align: center; }
@@ -581,17 +593,17 @@ a.simple:after {
       content: "";
       height: 2px;
       width: 60px;
-      background: #99CC02;
+      background: #285281;
       display: block;
       margin: 10px auto 0 auto; }
   .benefits ul {
     margin-top: 40px;
     margin-botom: 40px;
-    list-style-image: url("/img/check.svg"); }
+    list-style-image: url("/img/blue-check.svg"); }
 
 /*MID CTA*/
 .mid-cta {
-  background-image: url(/img/mountains-image.jpg);
+  background-image: url(/img/sunset-truck.jpg);
   background-size: cover; }
   .mid-cta .wrapper {
     padding: 60px 0; }
@@ -615,7 +627,7 @@ a.simple:after {
 .qualifications h3.underline:after {
   margin: 10px 0 20px 0; }
 .qualifications ul {
-  list-style-image: url("/img/check.svg");
+  list-style-image: url("/img/blue-check.svg");
   margin-left: -20px; }
 .qualifications li {
   margin-bottom: 40px; }
@@ -629,13 +641,13 @@ a.simple:after {
 
 /*FINAL CTA*/
 .final-cta .row {
-  padding: 60px 0; }
-.final-cta img {
-  max-width: 420px; }
+  padding: 60px 0 0 0; }
+.final-cta .truck-image img {
+  max-width: 300px;
+  margin: auto;
+  display: block; }
 .final-cta .inner-wrapper {
-  border-top: 1px solid #99CC02; }
-.final-cta .call-apply-btns {
-  text-align: right; }
+  border-top: 1px solid #285281; }
 
 /*FOOTER*/
 footer {
@@ -645,7 +657,7 @@ footer {
   footer .pipes {
     color: #666; }
   footer a {
-    color: #99CC02;
+    color: #285281;
     font-size: 13px;
     line-height: 18px;
     text-decoration: none; }
@@ -671,10 +683,16 @@ footer {
   .hide-br {
     display: block; } }
 @media (min-width: 980px) {
+  header .call-apply-btns {
+    text-align: right; }
+
   .hero {
     min-height: 622px; }
     .hero h1 {
       margin: 110px auto 40px auto; }
+
+  .logo {
+    text-align: left; }
 
   .driver-types {
     top: -150px;
@@ -683,10 +701,31 @@ footer {
     position: relative;
     max-height: 50px; }
 
-  .driver-type-box {
-    margin: 0; } }
+  .driver-type-box,
+  .driver-type-box:first-child {
+    margin-top: 0; }
+
+  .final-cta .call-apply-btns {
+    text-align: right; }
+
+  .benefits h2 {
+    margin-top: -160px; }
+
+  .final-cta .truck-image img {
+    min-width: 420px; } }
 @media (min-width: 1440px) {
   .wrapper {
     padding: 0 120px; } }
+@media (max-width: 980px) {
+  .final-cta h2 {
+    text-align: center;
+    margin: 30px 10px; }
+
+  .inner-wrapper {
+    padding: 0 20px; }
+
+  /* .row.driver-types .inner-wrap {
+       max-width:400px;
+   }*/ }
 
 /*# sourceMappingURL=main.css.map */
